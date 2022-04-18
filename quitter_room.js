@@ -1,16 +1,24 @@
-/*
-const firebaseConfig = {
-      apiKey: "AIzaSyD0OCqh3P36Tmp8nNmufBIeN0vMpRSmoik",
-      authDomain: "quitter-fa540.firebaseapp.com",
-      databaseURL: "https://quitter-fa540-default-rtdb.firebaseio.com",
-      projectId: "quitter-fa540",
-      storageBucket: "quitter-fa540.appspot.com",
-      messagingSenderId: "77500646545",
-      appId: "1:77500646545:web:ff57a42381eb44a37c6b30"
-    };
-    const app = initializeApp(firebaseConfig);
-function goodbye() {
-      window.location="quitter_room.html"
+var firebaseConfig = {
+    apiKey: "AIzaSyCs_A-FNThPEhs9ESwvGEdbvAh8nX42t8A",
+    authDomain: "quitt-supreme.firebaseapp.com",
+    databaseURL: "https://quitt-supreme-default-rtdb.firebaseio.com",
+    projectId: "quitt-supreme",
+    storageBucket: "quitt-supreme.appspot.com",
+    messagingSenderId: "279377395128",
+    appId: "1:279377395128:web:00b6cca41b43d6c0aa634d"
+  };
+firebase.initializeApp(firebaseConfig);
+
+    function goodbye() {
+      window.location="index.html"
+      localStorage.removeItem("name")
+}
+
+function quittoroom() {
+      var quitname = document.getElementById("room name").value;
+      firebase.database().ref("/").child(quitname).update({
+          // I didn't know what to put here.
+      })
 }
 
 function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
@@ -20,4 +28,3 @@ function getData() {firebase.database().ref("/").on('value', function(snapshot) 
       //End code
       });});}
 getData();
-*/
