@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="container">
-<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="goodbye()">Quit out of Quitter</button>
+<button id="logout" class="glyphicon glyphicon-log-out btn btn-danger" onclick="quit()">Quit out of Quitter</button>
 	<center>
 		<h1 class="header">	
 			You're a Quitter now
@@ -27,15 +27,15 @@
 				<img src="logo.png">
 			</sup>
 		</h1>
-		<h3 class="color_white"></h3>
+		<h3 class="color_white" id="quittergreeter">hi welcome</h3>
 		<div class="form-group input_div_room_page">
 			<label>Add Quit:</label>
 			<input type="text" id="room name" class="form-control" placeholder="Quit quitting to nothing and quit here first">
 		</div>
-		<button class="btn btn-success" onclick="quittoroom()">Quit to new Quit</button>
+		<button class="btn btn-success" onclick="quittonewroom()">Quit to new Quit</button>
 		<h3 class="color_white">TRENDINGQUITS</h3>
-		<div id="output">
-			
+		<div id="quitsthatpeopleliketoquitto">
+			<!--words-->
 		</div>
 	
 	</center>

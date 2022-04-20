@@ -9,22 +9,34 @@ var firebaseConfig = {
   };
 firebase.initializeApp(firebaseConfig);
 
-    function goodbye() {
+    function quit() {
       window.location="index.html"
       localStorage.removeItem("name")
 }
 
-function quittoroom() {
-      var quitname = document.getElementById("room name").value;
-      firebase.database().ref("/").child(quitname).update({
-          // I didn't know what to put here.
+var naem = localStorage.getItem("name")
+document.getElementById("quittergreeter").innerHTML = "Welcome, " + naem + ", you're a quitter!"
+
+function quittonewroom() {
+      var quitid = document.getElementById("room name").value;
+      firebase.database().ref("/").child(quitid).update({
+            you: "are a quitter",
+            thus: "you are welcome in quitter"
       })
+      localStorage.setItem("room", quitid)
+      window.location = "quipper.html"
 }
 
-function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("output").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
-       Room_names = childKey;
-      //Start code
-
-      //End code
+function getData() {firebase.database().ref("/").on('value', function(snapshot) {document.getElementById("quitsthatpeopleliketoquitto").innerHTML = "";snapshot.forEach(function(childSnapshot) {childKey  = childSnapshot.key;
+       quitids = childKey;
+       console.log(quitids)
+       var quitthing = "<div class='quitname' id="+quitids+" onclick='quittoquipper(this.id)' >"+ quitids +"</div><hr>";
+       document.getElementById("quitsthatpeopleliketoquitto").innerHTML += quitthing
       });});}
 getData();
+
+function quittoplacedroom(name) {
+  console.log(name)
+  localStorage.setItem("room", name)
+  window.location = "quipper.html"
+}
