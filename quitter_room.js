@@ -1,12 +1,12 @@
 var firebaseConfig = {
-    apiKey: "AIzaSyCs_A-FNThPEhs9ESwvGEdbvAh8nX42t8A",
-    authDomain: "quitt-supreme.firebaseapp.com",
-    databaseURL: "https://quitt-supreme-default-rtdb.firebaseio.com",
-    projectId: "quitt-supreme",
-    storageBucket: "quitt-supreme.appspot.com",
-    messagingSenderId: "279377395128",
-    appId: "1:279377395128:web:00b6cca41b43d6c0aa634d"
-  };
+      apiKey: "AIzaSyC7GC97G2XshHUpQsNysiW3wxKO6Y1hl7U",
+      authDomain: "quitterwithquips.firebaseapp.com",
+      databaseURL: "https://quitterwithquips-default-rtdb.firebaseio.com",
+      projectId: "quitterwithquips",
+      storageBucket: "quitterwithquips.appspot.com",
+      messagingSenderId: "714909310327",
+      appId: "1:714909310327:web:0dbf0d3372f1c87097d572"
+    };
 firebase.initializeApp(firebaseConfig);
 
     function quit() {
