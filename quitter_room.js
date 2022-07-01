@@ -1,11 +1,11 @@
 var firebaseConfig = {
-      apiKey: "AIzaSyC7GC97G2XshHUpQsNysiW3wxKO6Y1hl7U",
-      authDomain: "quitterwithquips.firebaseapp.com",
-      databaseURL: "https://quitterwithquips-default-rtdb.firebaseio.com",
-      projectId: "quitterwithquips",
-      storageBucket: "quitterwithquips.appspot.com",
-      messagingSenderId: "714909310327",
-      appId: "1:714909310327:web:0dbf0d3372f1c87097d572"
+      apiKey: "AIzaSyBtT_GX1cMufPYnSiUFhdkBP0FCbJuHYe0",
+      authDomain: "quitper-6a9fa.firebaseapp.com",
+      databaseURL: "https://quitper-6a9fa-default-rtdb.firebaseio.com",
+      projectId: "quitper-6a9fa",
+      storageBucket: "quitper-6a9fa.appspot.com",
+      messagingSenderId: "963769754651",
+      appId: "1:963769754651:web:84abfbf529b34506cc84be"
     };
 firebase.initializeApp(firebaseConfig);
 
@@ -20,8 +20,6 @@ document.getElementById("quittergreeter").innerHTML = "Welcome, " + naem + ", yo
 function quittonewroom() {
       var quitid = document.getElementById("room name").value;
       firebase.database().ref("/").child(quitid).update({
-            you: "are a quitter",
-            thus: "you are welcome in quitter"
       })
       localStorage.setItem("room", quitid)
       window.location = "quipper.html"
